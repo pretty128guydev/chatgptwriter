@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Writer Extension",
+  "version": "1.0",
+  "description": "ChatGPT Writer Chrome Extension",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "windows"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "favicon.ico",
+    "48": "logo192.png",
+    "128": "logo512.png"
+  }
+}

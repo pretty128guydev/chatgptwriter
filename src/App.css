@@ -1,0 +1,23 @@
+.extension-container {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 200px;
+
+}
+
+
+
+.extension-element {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}

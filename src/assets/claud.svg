@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<!-- Square background -->
+<rect width="100" height="100" fill="#f0f0f0"/>
+
+
+
+<!-- Rounded envelope -->
+<!-- x and y coordinates: 20, width: 60, height: 40 -->
+<!-- Rounded corners with rx and ry of 5 -->
+<rect x="20" y="20" width="60" height="40" fill="#ffffff" stroke="#808080" stroke-width="2" rx="5" ry="5"/>
+
+
+
+<!-- Diagonal line representing the back flap of the envelope -->
+<!-- Starts at (21, 21), peaks at (50, 39), ends at (79, 21) -->
+<!-- This ensures the line fits precisely within the envelope's borders -->
+<path d="M21 21 L50 39 L79 21" fill="none" stroke="#808080" stroke-width="2"/>
+
+
+
+<!-- Three asterisks distributed below the envelope -->
+<!-- Font size: 35, Color: #808080 (gray) -->
+<!-- Left asterisk: aligned to the left -->
+<text x="20" y="90" font-family="Arial, sans-serif" font-size="35" fill="#808080"></text>
+<!-- Center asterisk: aligned to the center -->
+<text x="50" y="90" font-family="Arial, sans-serif" font-size="35" fill="#808080" text-anchor="middle"></text>
+<!-- Right asterisk: aligned to the right -->
+<text x="80" y="90" font-family="Arial, sans-serif" font-size="35" fill="#808080" text-anchor="end">*</text>
+</svg>
