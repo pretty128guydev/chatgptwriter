@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { ChevronUp, ChevronDown } from 'lucide-react';
+import React from 'react';
 import { ImBin2 } from "react-icons/im";
 import { BsArrowReturnRight } from "react-icons/bs";
 
@@ -30,7 +29,7 @@ const ContextField: React.FC<ContextFieldProps> = ({ placeholder, value, onChang
             <BsArrowReturnRight size={16} className="mr-2" />
             Context
           </button>
-          <button onClick={() => { handleClear; hadleContext(true) }} className="text-gray-400 hover:text-gray-600">
+          <button onClick={() => { handleClear(); hadleContext(true) }} className="text-gray-400 hover:text-gray-600">
             <ImBin2 size={16} />
           </button>
         </div>

@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin'); // Add this
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 const dotenv = require('dotenv');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const env = dotenv.config().parsed;
 
 const envKeys = Object.keys(env).reduce((prev, next) => {
@@ -60,7 +60,7 @@ module.exports = {
             {
                 test: /\.css$/, // Match .css files
                 use: [
-                    'style-loader', // Inject CSS into the DOM
+                    MiniCssExtractPlugin.loader, // Extract CSS into separate files
                     'css-loader', // Load CSS files
                     'postcss-loader', // Process CSS with PostCSS (for Tailwind CSS)
                 ],
@@ -99,6 +99,9 @@ module.exports = {
             path: './.env', // Specify your .env file path here
         }),
         new webpack.DefinePlugin(envKeys),
+        new MiniCssExtractPlugin({
+            filename: 'styles.css', // Output filename for extracted CSS
+        }),
     ],
     externals: {
         react: 'React', // Treat React as an external dependency

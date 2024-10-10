@@ -41,7 +41,7 @@ const ToneSelector: React.FC<ToneSelectorProps> = ({ onChange }) => {
               onClick={() => selectTone(tone)}
             >
               {tone}
-              {tone == "Auto" && <MdAutoAwesome />}
+              {tone === "Auto" && <MdAutoAwesome />}
             </div>
           ))}
         </div>
@@ -51,7 +51,7 @@ const ToneSelector: React.FC<ToneSelectorProps> = ({ onChange }) => {
         className="flex items-center justify-between w-[140px] p-1 border rounded-md text-gray-700 bg-yellow hover:bg-yellow h-[30px]"
       >
         <span className='flex items-center gap-2'>{selectedTone}
-          {selectedTone == "Auto" && <MdAutoAwesome />}</span>
+          {selectedTone === "Auto" && <MdAutoAwesome />}</span>
           {isOpen ? <ChevronUp className="w-4 h-4" /> : <RxCross1 className="w-4 h-4" />}
         
       </button>
